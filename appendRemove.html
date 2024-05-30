@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade In / Fade Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <button id="addBtn">Add</button>
+        <button id="remBtn">Remove</button> 
+        <ul>
+            <li>1.</li>
+            <li id="remove">2.</li>
+            <li id="addAfter">3.</li>
+        </ul>
+    </div>
+
+    <script>
+        $("#addBtn").click(function(){
+            $("#addAfter").append("<li>4.</li>");
+        });
+        $("#remBtn").click(function(){
+            $("#remove").remove();
+        });
+    </script>
+</body>
+</html>

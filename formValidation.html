@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <form id="myform">
+            Name : <input type="text" name="name" id="name"> <br><br>
+            Age: <input type="number" name="age" id="age"> <br><br>
+            Tel: <input type="tel" name="tel" id="tel"> <br><br>
+            Gender : <br>
+            <input type="radio" name="gender" id="male"> Male <br>
+            <input type="radio" name="gender" id="female"> Female <br>
+            <input type="radio" name="gender" id="other"> Other <br><br>
+
+            <input type="submit" value="Submit" id="submitBtn">
+        </form>
+
+        <p id="errorMessage" style="color:red; display:none;">All fields are required!</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#myform').submit(function(event){
+                event.preventDefault();
+                if($('#name').val() === ''){
+                    $('#errorMessage').show();
+                } else {
+                    $('#errorMessage').hide();
+                    alert('Form submitted successfully!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

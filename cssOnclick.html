@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade In / Fade Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button onclick="changeColor()" style="margin: 10px;">Apply CSS</button>
+    <div id="change" style="background-color: palegreen; height: 100px; width: 100px;"></div>
+
+    <script>
+        function changeColor(){
+            $("#change").css("backgroundColor" , "pink");
+        }
+    </script>
+</body>
+</html>
